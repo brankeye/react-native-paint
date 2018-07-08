@@ -49,3 +49,5 @@ const ThemedText = withStyles(paint)(({ styles, ...props }) => (
 ## Try it
 
 Check it out [here](https://exp.host/@brankeye/themed-app) with [Expo](https://expo.io/).
+
+Have a look at the sample code [here](https://github.com/brankeye/react-native-paint/tree/master/samples/themed-app).

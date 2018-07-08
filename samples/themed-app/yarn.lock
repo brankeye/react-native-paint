@@ -3411,9 +3411,9 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-react-native-paint@^1.0.0-alpha.2:
-  version "1.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/react-native-paint/-/react-native-paint-1.0.0-alpha.2.tgz#f8d4d1f80edc5b54718893f28ed0f0fdd454cf74"
+react-native-paint@^1.0.0-alpha.3:
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/react-native-paint/-/react-native-paint-1.0.0-alpha.3.tgz#bc695607df00c91f7aa168691c853185b0083331"
 
 react-native-reanimated@1.0.0-alpha.3:
   version "1.0.0-alpha.3"
