@@ -6,5 +6,8 @@
   "repository": "https://github.com/brankeye/react-native-paint.git",
   "author": "brankeye",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "files": [
+    "lib/"
+  ]
 }

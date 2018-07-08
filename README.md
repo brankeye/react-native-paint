@@ -45,3 +45,7 @@ const ThemedText = withStyles(paint)(({ styles, ...props }) => (
   <Text {...props} styles={styles} />
 ));
 ```
+
+## Try it
+
+Check it out [here](https://exp.host/@brankeye/themed-app) with [Expo](https://expo.io/).
