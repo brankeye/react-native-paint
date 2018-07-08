@@ -1,8 +1,8 @@
 # React Native Paint
 
-A themeable abstraction over React Native StyleSheet.
+A themeable abstraction over React Native [StyleSheet](https://facebook.github.io/react-native/docs/stylesheet.html).
 
-## How?
+## Usage
 
 1.  Install `react-native-paint` using yarn or npm:
 
