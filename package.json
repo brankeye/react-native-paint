@@ -1,6 +1,6 @@
 {
   "name": "react-native-paint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A themeable abstraction over React Native StyleSheet.",
   "main": "lib/index.js",
   "repository": "https://github.com/brankeye/react-native-paint.git",
@@ -9,5 +9,13 @@
   "private": false,
   "files": [
     "lib/"
+  ],
+  "keywords": [
+    "StyleSheet",
+    "React",
+    "Native",
+    "Theme",
+    "Themeable",
+    "Styles"
   ]
 }
