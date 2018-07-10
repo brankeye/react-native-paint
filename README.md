@@ -4,7 +4,7 @@ A themeable abstraction over React Native [StyleSheet](https://facebook.github.i
 
 ## Usage
 
-1.  Install `react-native-paint` using yarn or npm:
+1.  Install [`react-native-paint`](https://www.npmjs.com/package/react-native-paint) using yarn or npm:
 
 ```
 yarn add react-native-paint
@@ -31,16 +31,24 @@ const App = () => (
 ```jsx
 import Paint, { StylesConsumer, withStyles } from "react-native-paint";
 
+// with context
 const paint = Paint.create(theme => ({
   color: theme.textColor
 }));
 
+// or without context
+const paint = Paint.create({
+  color: "blue"
+});
+
+// as consumer
 const ThemedText = props => (
   <StylesConsumer paint={paint}>
     {styles => <Text {...props} styles={styles} />}
   </StylesConsumer>
 );
 
+// as hoc
 const ThemedText = withStyles(paint)(({ styles, ...props }) => (
   <Text {...props} styles={styles} />
 ));
