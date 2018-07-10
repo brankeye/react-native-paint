@@ -1,6 +1,6 @@
 {
   "name": "react-native-paint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A themeable abstraction over React Native StyleSheet.",
   "main": "lib/index.js",
   "repository": "https://github.com/brankeye/react-native-paint.git",
