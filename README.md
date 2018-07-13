@@ -51,7 +51,7 @@ class App extends React.Component {
   render() {
     const { currentTheme } = this.state;
     return (
-      <StylesProvider id={currentTheme.name} context={currentTheme}>
+      <StylesProvider id={currentTheme.name} theme={currentTheme}>
         <MySuperCoolAwesomeApp onToggleTheme={this.toggleTheme} />
       </StylesProvider>
     );
@@ -66,15 +66,25 @@ Use it in your components.
 ```jsx
 import Paint, { StylesConsumer, withStyles } from "react-native-paint";
 
-// with context
+// with theme
 const paint = Paint.create((theme) => ({
-  color: theme.textColor
+  color: theme.textColor,
+  container: {
+    // Paint inherits all properties from StyleSheet
+    ...Paint.absoluteFillObject,
+  }
 }));
 
-// or without context
+// or without theme
 const paint = Paint.create({
-  color: "blue"
+  color: "blue",
 });
+
+// or create a stylesheet directly
+// but do not pass this to paint prop on consumer/hoc
+const stylesheet = Paint.sheet({
+  color: "blue",
+})
 
 // as consumer
 const ThemedText = (props) => (
@@ -100,3 +110,5 @@ export default withStyles(paint)(ThemedText);
 Check it out [here](https://exp.host/@brankeye/themed-app) with [Expo](https://expo.io/).
 
 Have a look at the sample code [here](https://github.com/brankeye/react-native-paint/tree/master/samples/themed-app).
+
+See the changelog [here](https://github.com/brankeye/react-native-paint/blob/master/changelog.md).

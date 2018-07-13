@@ -33,7 +33,7 @@ class App extends React.Component {
   render() {
     const { currentTheme } = this.state;
     return (
-      <StylesProvider id={currentTheme.name} context={currentTheme}>
+      <StylesProvider id={currentTheme.name} theme={currentTheme}>
         <StylesConsumer paint={paint}>
           {styles => (
             <View style={styles.container}>
