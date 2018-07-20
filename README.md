@@ -68,8 +68,8 @@ import Paint, { StylesConsumer, withStyles } from "react-native-paint";
 
 // with theme
 const paint = Paint.create((theme) => ({
-  color: theme.textColor,
   container: {
+    color: theme.textColor,
     // Paint inherits all properties from StyleSheet
     ...Paint.absoluteFillObject,
   }
