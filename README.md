@@ -112,3 +112,5 @@ Check it out [here](https://exp.host/@brankeye/themed-app) with [Expo](https://e
 Have a look at the sample code [here](https://github.com/brankeye/react-native-paint/tree/master/samples/themed-app).
 
 See the changelog [here](https://github.com/brankeye/react-native-paint/blob/master/changelog.md).
+
+Read about it on [Medium](https://medium.com/@brankeye/making-easily-themeable-react-native-stylesheets-bd8782b4e685)
