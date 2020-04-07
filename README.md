@@ -26,25 +26,25 @@ import { StylesProvider } from "react-native-paint";
 
 const themes = {
   light: {
-    name: "light"
+    name: "light",
     // some light theme properties
   },
   dark: {
-    name: "dark"
+    name: "dark",
     // some dark theme properties
-  }
+  },
 };
 
 class App extends React.Component {
   state = {
-    currentTheme: themes.light
+    currentTheme: themes.light,
   };
 
   toggleTheme = () => {
     const { name } = this.state.currentTheme;
     const nextTheme = name === "light" ? themes.dark : themes.light;
     this.setState({
-      currentTheme: nextTheme
+      currentTheme: nextTheme,
     });
   };
 
@@ -64,43 +64,36 @@ class App extends React.Component {
 Use it in your components.
 
 ```jsx
-import Paint, { StylesConsumer, withStyles } from "react-native-paint";
+import { useStyles, StylesConsumer, withStyles } from "react-native-paint";
 
 // with theme
-const paint = Paint.create((theme) => ({
+const paint = (theme) => ({
   container: {
     color: theme.textColor,
     // Paint inherits all properties from StyleSheet
     ...Paint.absoluteFillObject,
-  }
-}));
-
-// or without theme
-const paint = Paint.create({
-  color: "blue",
+  },
 });
 
 // or create a stylesheet directly
 // but do not pass this to paint prop on consumer/hoc
 const stylesheet = Paint.sheet({
   color: "blue",
-})
+});
 
 // as consumer
 const ThemedText = (props) => (
   <StylesConsumer paint={paint}>
-    {(styles) => (
-      <Text {...props} styles={styles} />
-    )}
+    {(styles) => <Text {...props} styles={styles} />}
   </StylesConsumer>
 );
 
 export default ThemedText;
 
 // or as hoc
-const ThemedText = (({ styles, ...props }) => (
+const ThemedText = ({ styles, ...props }) => (
   <Text {...props} styles={styles} />
-));
+);
 
 export default withStyles(paint)(ThemedText);
 ```
